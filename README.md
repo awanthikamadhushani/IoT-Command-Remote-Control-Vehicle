@@ -1,36 +1,35 @@
 # IoT Command Remote Control Vehicle
 
-## About 
-A server room is a space for storing, powering, and operating computer servers and their associated components. Every firm or institution has its own server rooms or data centers where all of its computers and networks are connected. Climate is one of the factors that determine the energy consumption and environmental effect of a server room in such situations. In this project, we will develop a system that monitors the temperature, humidity, smoke leakage, current voltage, and vibration of the server room via an Arduino IoT dashboard. In addition to attempting to detect and alert for Power Failure, Fire, Smoke, etc., this system will also integrate automation at the edge level for temperature control.
+## Objective 
+The main objective behind this paper is to develop a robot to perform the act of surveillance in domestic areas. Robots can be manually controlled or can be automatic based on the requirement. The purpose of this robot is to roam around and provide audio and video information from the given environment and to send that obtained information to the user.
+
+This robot also uses various sensors that collects data and sends it to the Arduino microcontroller which controls the robot behavior. Along with the obtained live streamed video output, user can also obtain the presence of metal bombs using metal detectors. GPS and Tracking locations can be identified.
+Thus, the action of surveillance can be performed. Further advancement project can provide surveillance even in defense areas.
 
 ---
 
-## Contact Me
-### Who Am I?
+## About Me
 
-I'm Yasiru Tishan A Lead in Graphic Designer & Web Developer I am a creative professional with extensive graphic design, web development, social media, and project management. I am also good at multitasking and hard worker.
+I am Awanthika Madhushani, From Plymouth University. I have a good knowledge in web designing. I am strongly believing in dedication and hard work rather than just luck. I pursue to give the best out of my abilities for the assigned duties for my organization. I’m a team player intend to apply my knowledge and skills for the betterment of the organization and continuously improve myself to keep up with the latest technological and management of the systems achievements and practices.
 
-I am an enthusiastic, confident character and goal-oriented team leader and counts on interpersonal skills and organizational planning as a critical strength. My experience in IT is attached to the technology industry, architecture, corporate sectors, and designer positions.
-
-You can contact me directly at 10749896@students.plymouth.ac.uk if you have any questions, concerns, or just to say hi! If you want to submit a suggestion, please see the github issues page.
+You can contact me directly at 10749947@students.plymouth.ac.uk if you have any questions, concerns, or just to say hi! If you want to submit a suggestion, please see the github issues page.
 
 ---
 
 ### Dependencies
 
-Socket.io
+Mobile  Application Development - Java
 
-Node.js
-
-MongoDB
 
 ---
 
-### Key Features
+### Advantages
 
-Arduino IoT Dashboard Monitoring
-
-Notifications - Alerts on Email 
+• It’s easy recognize surveillance in domestic areas.
+• It’s user-friendly to user.
+• Can be easily tracked and monitored through GPS.
+• Identification of background sound and video.
+• Motions are dedicated through ESP-32 CAM Module.
 
 ---
 

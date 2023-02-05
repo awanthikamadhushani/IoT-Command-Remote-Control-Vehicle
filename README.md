@@ -25,11 +25,11 @@ Mobile  Application Development - Java
 
 ### Advantages
 
-• It’s easy recognize surveillance in domestic areas.
-• It’s user-friendly to user.
-• Can be easily tracked and monitored through GPS.
-• Identification of background sound and video.
-• Motions are dedicated through ESP-32 CAM Module.
+It’s easy recognize surveillance in domestic areas.
+It’s user-friendly to user.
+Can be easily tracked and monitored through GPS.
+Identification of background sound and video.
+Motions are dedicated through ESP-32 CAM Module.
 
 ---
 

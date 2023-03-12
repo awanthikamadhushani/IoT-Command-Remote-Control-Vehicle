@@ -74,6 +74,8 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     showMainActivity();
+                                    Toast.makeText(RegisterActivity.this, "Successfully Account Created",
+                                            Toast.LENGTH_SHORT).show();
                                 }
                             });
 

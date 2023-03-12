@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Car_Application</string>
+    <string name="app_name">IOT Vehicle Controller</string>
+    <string name="upbutton">upButton</string>
+    <string name="downbutton">downButton</string>
+    <string name="leftbutton">leftButton</string>
+    <string name="rightbutton">rightButton</string>
+    <string name="config">config</string>
+    <string name="map">Map</string>
+    <string name="map_view">Map View</string>
 </resources>

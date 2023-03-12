@@ -4,10 +4,10 @@
     <item android:id="@android:id/background">
 
         <shape android:shape="ring"
-            android:thickness="40dp"
+            android:thickness="20dp"
             android:useLevel="false">
 
-            <solid android:color="#D2EDFC"/>
+            <solid android:color="#92A4EA"/>
 
         </shape>
     </item>
@@ -17,10 +17,10 @@
             android:fromDegrees="270"
             android:toDegrees="270">
             <shape android:shape="ring"
-                android:thickness="40dp"
+                android:thickness="20dp"
                 android:useLevel="true">
 
-                <solid android:color="#287CF6"/>
+                <solid android:color="#FF9800"/>
 
             </shape>
         </rotate>

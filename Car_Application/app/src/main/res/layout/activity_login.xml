@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CFF8F7"
+    android:background="#D5F5FF"
     tools:context=".LoginActivity">
 
 
@@ -17,22 +17,22 @@
         android:layout_marginEnd="35dp"
         android:gravity="center"
         android:text="Login"
-        android:textColor="#031533"
-        android:textSize="80dp"
+        android:textColor="#2A3B6E"
+        android:textSize="80sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="76dp" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="550dp"
         android:layout_marginEnd="35dp"
         android:gravity="center"
         android:text="Login"
-        android:textColor="@color/white"
+        android:textColor="#0534BD"
         android:background="@drawable/button"/>
 
     <EditText
@@ -46,7 +46,9 @@
         android:layout_marginEnd="35dp"
         android:hint="Email"
         android:inputType="textPersonName"
-        android:textColor="#060E3C" />
+        android:minHeight="48dp"
+        android:textColor="#060E3C"
+        tools:ignore="TextFields" />
 
     <EditText
         android:id="@+id/etLoginPassword"
@@ -59,7 +61,20 @@
         android:layout_marginEnd="35dp"
         android:hint="Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:textColor="#081649" />
+
+    <ImageView
+        android:id="@+id/show_pass_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="420dp"
+        android:layout_marginRight="39dp"
+        android:alpha=".5"
+        android:onClick="ShowHidePass"
+        android:padding="5dp"
+        android:src="@android:drawable/ic_menu_view" />
 
     <TextView
         android:id="@+id/tvSwitchToRegister"
@@ -70,7 +85,8 @@
         android:layout_marginEnd="65dp"
         android:gravity="center"
         android:text="Register"
+        android:textStyle="italic"
         android:textColor="#092CAA"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
 </RelativeLayout>

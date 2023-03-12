@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "283259932311",
+    "firebase_url": "https://carcontroller-da16c-default-rtdb.firebaseio.com",
+    "project_id": "carcontroller-da16c",
+    "storage_bucket": "carcontroller-da16c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283259932311:android:04c12bc8b0e2fdf5d3e3d2",
+        "android_client_info": {
+          "package_name": "com.example.car_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283259932311-j0h1bt5r2modrfpb3nftdil6kakp7248.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClPXzpdx-QgsZIQqSf9a-QudPdeLy22ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283259932311-j0h1bt5r2modrfpb3nftdil6kakp7248.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283259932311:android:62fbc37fb59ddff2d3e3d2",
+        "android_client_info": {
+          "package_name": "com.example.car_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283259932311-j0h1bt5r2modrfpb3nftdil6kakp7248.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClPXzpdx-QgsZIQqSf9a-QudPdeLy22ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283259932311-j0h1bt5r2modrfpb3nftdil6kakp7248.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

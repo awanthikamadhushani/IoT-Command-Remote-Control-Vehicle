@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:paddingLeft="21dp"
+    android:paddingRight="21dp"
+    android:paddingBottom="11dp"
+    android:background="@drawable/layout_bg"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+
+    <EditText
+        android:id="@+id/editip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:textColor="#02101B"
+        android:padding="11dp"
+        android:hint="Enter IP : xxx.xxx.xxx.xxx"
+        android:textColorHint="#3C75E8"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:background="@drawable/button"
+        android:layout_marginTop="11dp"
+        android:textColor="#3C75E8"
+        android:layout_gravity="end"/>
+</LinearLayout>

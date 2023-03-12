@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:ignore="ExtraText">
-    android:shape="rectangle"
+<shape android:shape="rectangle"
 
-    <corners android:radius="27dp" />
-    <gradient
-        android:angle="45"
-        android:centerX="@android:integer/config_mediumAnimTime"
-        android:startColor="#030727"
-        android:endColor="#FF030727"
-        android:type="linear" />
-    <size
-        android:width="182dp"
-        android:height="54dp" />
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <corners android:radius="50dp" />
+
+    <stroke android:width="3dp"
+        android:color="#0534BD" />
+
+    <gradient android:angle="-90"
+        android:startColor="#00000000"
+        android:endColor="#00000000"  />
 </shape>

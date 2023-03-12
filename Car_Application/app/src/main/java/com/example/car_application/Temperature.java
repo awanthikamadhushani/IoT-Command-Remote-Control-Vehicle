@@ -1,9 +1,9 @@
 package com.example.car_application;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,12 +19,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class Temperature extends AppCompatActivity {
 
     private ProgressBar progressbar_t;
+    private ProgressBar progressbar_h;
     DatabaseReference drf;
-    TextView value;
-    String temString;
+    TextView TempValue;
+    TextView HumValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,21 +35,33 @@ public class Temperature extends AppCompatActivity {
         setContentView(R.layout.activity_temperature);
 
         progressbar_t = findViewById(R.id.progressBar_t);
-        value = findViewById(R.id.text_Pro_t);
+        progressbar_h = findViewById(R.id.progressBar_h);
+        TempValue = findViewById(R.id.TempTextValue);
+        HumValue = findViewById(R.id.HumTextValue);
         drf = FirebaseDatabase.getInstance().getReference();
 
         drf.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("SetTextI18n")
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.getValue() != null) {
-                    double status = (Double) snapshot.child("sensor/Temperature").getValue();
-                    value.setText(status+"°C");
+            public void onDataChange(DataSnapshot snapshot) {
+                try {
+                    if (snapshot.getValue() != null) {
+                        double statustem = (Double) snapshot.child("sensor/Temperature").getValue();
+                        TempValue.setText(statustem + "°C");
+                        String tempValue = Integer.toString((int)statustem);
+                        progressbar_t.setProgress(Integer.parseInt(tempValue));
 
-                    String newValue = Integer.toString((int)status);
-                    progressbar_t.setProgress(Integer.parseInt(newValue));
+                        String statushum = Objects.toString(snapshot.child("sensor/Humidity").getValue().toString());
+                        progressbar_h.setProgress(Integer.parseInt(statushum));
+                        HumValue.setText(statushum + "°%");
 
-                } else {
-                    Toast.makeText(getBaseContext(), "NULLL", Toast.LENGTH_SHORT).show();
+
+
+                    } else {
+                        Toast.makeText(getBaseContext(), "NULL", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (NumberFormatException ex) {
+                    ex.printStackTrace();
                 }
             }
 
@@ -57,12 +72,7 @@ public class Temperature extends AppCompatActivity {
         });
 
         Button btnmain = findViewById(R.id.btn_main_t);
-        btnmain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switchToMain();
-            }
-        });
+        btnmain.setOnClickListener(v -> switchToMain());
     }
     private void switchToMain() {
         FirebaseAuth.getInstance().signOut();

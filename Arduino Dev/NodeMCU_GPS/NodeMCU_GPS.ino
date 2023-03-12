@@ -7,8 +7,8 @@
 // Firebase connections data
 #define FIREBASE_HOST "carcontroller-da16c-default-rtdb.firebaseio.com"      
 #define FIREBASE_AUTH "yk70eYcg4rchONc04WGbVnCt5nHaFtcRv3yiGs9o"            
-#define WIFI_SSID "ReddragM"                                  
-#define WIFI_PASSWORD "Reddrag&1986" 
+#define WIFI_SSID "your SSID"                                  
+#define WIFI_PASSWORD "password" 
 
 
  
@@ -20,7 +20,7 @@ FirebaseJson json;
 //GPS Module RX pin to NodeMCU D1
 //GPS Module TX pin to NodeMCU D2
 //const int RXPin = 3, TXPin = 1;
-SoftwareSerial ss(D1, D2); // RX, TX
+SoftwareSerial ss(D2, D1); // RX, TX
 TinyGPSPlus gps;
 //----------------------------------------------------------------------------
 
@@ -45,15 +45,15 @@ void loop(){
     if (gps.location.isUpdated()) {
       Serial.print("Latitude= ");
       Serial.print(gps.location.lat(), 6);
-      Firebase.pushFloat(firebaseData, "Latitude -" , gps.location.lat());
+      Firebase.setFloat(firebaseData, "map/lat" , gps.location.lat());
       Serial.print(" | Longitude= ");
       Serial.print(gps.location.lng(), 6);
-      Firebase.pushFloat(firebaseData, "Longitude -" , gps.location.lng());
+      Firebase.setFloat(firebaseData, "map/lon" , gps.location.lng());
       Serial.print(" | Speed in km/h = ");
       Serial.print(gps.speed.kmph());
-      float Busspeed = gps.speed.kmph();
-      if( Busspeed>3){
-      Firebase.pushFloat(firebaseData, "Speed - " , Busspeed);
+      float Carspeed = gps.speed.kmph();
+      if( Carspeed>3){
+      Firebase.setFloat(firebaseData, "map/speed" , Carspeed);
       }
       
       Serial.print(" | Number os satellites in use = ");

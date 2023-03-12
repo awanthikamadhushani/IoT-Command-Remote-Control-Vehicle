@@ -485,9 +485,7 @@ void Dht22() {
   Serial.print("Temperature: ");
   Serial.print(t);
   Serial.println(" *C ");
-  String temp = float(t) + String("°C");
-  String humd = float(h) + String("%");
-  Firebase.setString(firebaseData, "sensor/Temperature", temp+0.11);
-  Firebase.setString(firebaseData, "sensor/Humidity", humd);
+  Firebase.setFloat(firebaseData, "sensor/Temperature", t + 0.11);
+  Firebase.setFloat(firebaseData, "sensor/Humidity", h);
   delay(100);
 }

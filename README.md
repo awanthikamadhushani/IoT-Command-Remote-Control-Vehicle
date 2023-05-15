@@ -1,7 +1,5 @@
 # IoT Command Remote Control Vehicle - RC Command
 
-![rc -Csommand](https://user-images.githubusercontent.com/100335819/223732628-da9dfaec-7f67-4195-a545-6247e835ec28.png)
-
 ## Objective 
 The main objective behind this paper is to develop a robot to perform the act of surveillance in domestic areas. Robots can be manually controlled or can be automatic based on the requirement. The purpose of this robot is to roam around and provide audio and video information from the given environment and to send that obtained information to the user.
 

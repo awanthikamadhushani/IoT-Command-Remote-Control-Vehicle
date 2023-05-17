@@ -1,6 +1,7 @@
 // firebase
 #include <WiFi.h>
 #include <FirebaseESP32.h>
+#include "time.h"
 
 // Set these to run example.
 #define FIREBASE_HOST "carcontroller-da16c-default-rtdb.firebaseio.com"
@@ -12,6 +13,9 @@ FirebaseData firebaseData;
 FirebaseData ledData;
 FirebaseJson json;
 void printResult(FirebaseData &data);
+
+int timestamp;
+const char* ntpServer = "pool.ntp.org";
 
 #define MOTOR_1_PIN_1    14
 #define MOTOR_1_PIN_2    15
@@ -397,6 +401,8 @@ void setup() {
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   Firebase.reconnectWiFi(true);
   startCameraServer();
+
+  configTime(0, 0, ntpServer);
 }
 
 void loop() {
@@ -468,6 +474,23 @@ void loop() {
     }
   Dht22();
   startCameraServer();
+}
+// Function that gets current epoch time
+unsigned long getTime() {
+  time_t now;
+  struct tm timeinfo;
+  if (!getLocalTime(&timeinfo)) {
+    //Serial.println("Failed to obtain time");
+    return(0);
+  }
+  time(&now);
+  return now;
+
+  //Get current timestamp
+    timestamp = getTime();
+    Serial.print ("time: ");
+    Serial.println (timestamp);
+    Firebase.setString(firebaseData, "log/Time", timestamp);
 }
 
 void Dht22() {

@@ -151,33 +151,41 @@
       
       <div id="cards-div">
         <div class="cards">
-          <!--TEMPERATURE-->
-          <div class="card">
-            <p><i class="fas fa-thermometer-half" style="color:#059e8a;"></i> TEMPERATURE</p>
-            <p><span class="reading"><span id="temp"></span> &deg;C</span></p>
-          </div>
+          
           <!--HUMIDITY-->
           <div class="card">
             <p><i class="fas fa-tint" style="color:#00add6;"></i> HUMIDITY</p>
             <p><span class="reading"><span id="hum"></span> &percnt;</span></p>
           </div>
+          <!--TEMPERATURE-->
+          <div class="card">
+            <p><i class="fas fa-thermometer-half" style="color:#059e8a;"></i> TEMPERATURE</p>
+            <p><span class="reading"><span id="temp"></span> &deg;C</span></p>
+          </div>
           <!--SPEED-->
           <div class="card">
             <p><i class="fas fa-angle-double-down" style="color:#e1e437;"></i> SPEED</p>
-            <p><span class="reading"><span id="pres"></span> kmph</span></p>
+            <p><span class="reading"><span id="speed"></span> kmph</span></p>
           </div>
         </div>
       </div>
       <!--GAUGES-->
       <div id ="gauges-div">
         <div class="cards">
+          
+          <!--HUMIDITY-->
+          <div class="card">
+            <canvas id="gauge-humidity"></canvas>
+          </div>
+
           <!--TEMPERATURE-->
           <div class="card">
             <canvas id="gauge-temperature"></canvas>
           </div>
-          <!--HUMIDITY-->
+
+          <!--SPEED-->
           <div class="card">
-            <canvas id="gauge-humidity"></canvas>
+            <canvas id="gauge-speed"></canvas>
           </div>
         </div>
       </div>
@@ -202,13 +210,18 @@
             <div id="chart-humidity" class="chart-container"></div>
           </div>
         </div>
-        <!--PRESSURE-CHART-->
+        <!--SPEED-CHART-->
         <div class="cards">
           <div class="card">
             <p><i class="fas fa-angle-double-down" style="color:#e1e437;"></i> SPEED CHART</p>
-            <div id="chart-pressure" class="chart-container"></div>
+            <div id="chart-speed" class="chart-container"></div>
           </div>
         </div>
+      </div>
+
+
+      <div id="details">      
+	     <iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>';
       </div>
 
     <!--BUTTONS TO HANDLE DATA-->
@@ -216,9 +229,7 @@
       <!--View data button-->
       <button id="view-data-button">View all data</button>
       <!--Hide data button-->
-      <button id="hide-data-button" style= "display:none;">Hide data</button>
-      <!--Delete data button-->
-      <button id="delete-button" class="deletebtn">Delete data</button>
+      <button id="hide-data-button" style= "display:none;">Hide data</button>      
     </p>
     <!--Modal to delete data-->
     <div id="delete-modal" class="modal" sytle="display:none">
@@ -240,15 +251,15 @@
       <div class="card" id="table-container" style= "display:block;">
         <table id="readings-table">
             <tr id="theader">
-              <th>Timestamp</th>
-              <th>Temp (ºC)</th>
-              <th>Hum (%)</th>
+              <th>Time</th>
+              <th>Temperature (ºC)</th>
+              <th>Humidity (%)</th>
               <th>Speed (kmph)</th>
             </tr>
             <tbody id="tbody">
             </tbody>
         </table>
-        <p><button id="load-data" style= "display:none;">More results...</button></p>
+        <p><button id="load-data" style= "display:none;"></button></p>
       </div>
     </div>
 
@@ -259,6 +270,7 @@
     <script src="scripts/charts-definition.js"></script>
     <script src="scripts/gauges-definition.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/map.js"></script>
 
   </body>
 

@@ -43,19 +43,16 @@ public class Temperature extends AppCompatActivity {
         drf.addValueEventListener(new ValueEventListener() {
             @SuppressLint("SetTextI18n")
             @Override
-            public void onDataChange(DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
                     if (snapshot.getValue() != null) {
-                        double statustem = (Double) snapshot.child("sensor/Temperature").getValue();
+                        String statustem = (String) Objects.requireNonNull(snapshot.child("sensor/Temperature").getValue()).toString();
                         TempValue.setText(statustem + "°C");
-                        String tempValue = Integer.toString((int)statustem);
-                        progressbar_t.setProgress(Integer.parseInt(tempValue));
+                        progressbar_t.setProgress(Integer.parseInt(statustem));
 
-                        String statushum = Objects.toString(snapshot.child("sensor/Humidity").getValue().toString());
+                        String statushum = (String) Objects.requireNonNull(snapshot.child("sensor/Humidity").getValue()).toString();
                         progressbar_h.setProgress(Integer.parseInt(statushum));
-                        HumValue.setText(statushum + "°%");
-
-
+                        HumValue.setText(statushum+"%");
 
                     } else {
                         Toast.makeText(getBaseContext(), "NULL", Toast.LENGTH_SHORT).show();

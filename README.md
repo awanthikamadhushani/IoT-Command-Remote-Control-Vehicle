@@ -19,7 +19,8 @@ You can contact me directly at 10749947@students.plymouth.ac.uk if you have any 
 ### Dependencies
 
 Mobile  Application Development - Java
-
+Web Application HTML/CSS/JavaScript/PHP
+Arduino C++
 
 ---
 

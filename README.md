@@ -1,5 +1,8 @@
 # IoT Command Remote Control Vehicle - RC Command
 
+![6](https://github.com/awanthikamadhushani/IoT-Command-Remote-Control-Vehicle/assets/100335819/87016cf2-864a-417b-8318-1764118230ae)
+
+
 ## Objective 
 The main objective behind this paper is to develop a robot to perform the act of surveillance in domestic areas. Robots can be manually controlled or can be automatic based on the requirement. The purpose of this robot is to roam around and provide audio and video information from the given environment and to send that obtained information to the user.
 
@@ -20,15 +23,24 @@ You can contact me directly at 10749947@students.plymouth.ac.uk if you have any 
 
 Mobile  Application Development - Java
 
+Web Application HTML/CSS/JavaScript
+
+Arduino C++
+
+Firebase
 
 ---
 
 ### Advantages
 
 It’s easy recognize surveillance in domestic areas.
+
 It’s user-friendly to user.
+
 Can be easily tracked and monitored through GPS.
+
 Identification of background sound and video.
+
 Motions are dedicated through ESP-32 CAM Module.
 
 ---

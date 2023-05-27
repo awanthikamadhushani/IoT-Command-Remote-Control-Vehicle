@@ -124,9 +124,8 @@ public class JoystickActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             if (!ip.getText().toString().equals("")) {
-
                                 ipaddress = new String(String.valueOf(ip.getText()));
-                                //Toast.makeText(JoystickActivity.this, "IP address : "+ipaddress, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(JoystickActivity.this, "IP address : "+ipaddress, Toast.LENGTH_SHORT).show();
                                 showCam();
                             } else {
                                 Toast.makeText(JoystickActivity.this, "Please enter IP to get camera view", Toast.LENGTH_SHORT).show();

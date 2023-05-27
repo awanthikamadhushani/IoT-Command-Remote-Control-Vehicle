@@ -89,10 +89,10 @@ void loop()
   String fireTemp = String(t);// + String(" °C");                  //Temperature integer to string conversion
   //delay(100);
  
-  parentPath= "/log/" + String(timestamp);
+  parentPath= "/log1/" + String(timestamp);
 
-  Firebase.setString(firebaseData, "sensor/Humidity", fireHumid);            //setup path to send Humidity readings
-  Firebase.setString(firebaseData, "sensor/Temperature", fireTemp);  
+  Firebase.setString(firebaseData, "sensor1/Humidity", fireHumid);            //setup path to send Humidity readings
+  Firebase.setString(firebaseData, "sensor1/Temperature", fireTemp);  
   
   Firebase.setString(firebaseData, parentPath + "/Humidity", fireHumid);            //setup path to send Humidity readings
   Firebase.setString(firebaseData, parentPath + "/Temperature", fireTemp);         //setup path to send Temperature readings

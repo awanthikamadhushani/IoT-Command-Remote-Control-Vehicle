@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     double Latitude = (Double) snapshot.child("map/lat").getValue();
                     double Longitude = (Double) snapshot.child("map/lon").getValue();
 
-                    String uri = "http://maps.google.com/maps?q=" + Latitude + "," + Longitude;
+                    String uri = "geo:0,0?q=" + Latitude + "," + Longitude;
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
                     intent.setPackage("com.google.android.apps.maps");
                     startActivity(intent);

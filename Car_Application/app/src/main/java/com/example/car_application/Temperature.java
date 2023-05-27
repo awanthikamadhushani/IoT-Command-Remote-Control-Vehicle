@@ -46,11 +46,11 @@ public class Temperature extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
                     if (snapshot.getValue() != null) {
-                        String statustem = (String) snapshot.child("sensor/Temperature").getValue(String.class);
+                        String statustem = (String) snapshot.child("sensor1/Temperature").getValue(String.class);
                         TempValue.setText(statustem + "°C");
                         progressbar_t.setProgress((int) Float.parseFloat(statustem));
 
-                        String statushum = (String) snapshot.child("sensor/Humidity").getValue(String.class);
+                        String statushum = (String) snapshot.child("sensor1/Humidity").getValue(String.class);
                         progressbar_h.setProgress((int) Float.parseFloat(statushum));
                         HumValue.setText(statushum+"%");
 
